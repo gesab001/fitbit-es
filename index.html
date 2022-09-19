@@ -26,6 +26,7 @@
 
 <script>
 //file:///C:/Users/giova/fitbit/?appType=app&sdk=4&appName=God%20is%20Love
+var clock = "RELOJ";
 const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
@@ -44,7 +45,7 @@ const appName = urlParams.get('appName');
 console.log(appName);
 var demoTitle = appName.replace(/_/g, " ").toUpperCase();
 if (appType==="clockface"){
-  demoTitle =  appName.replace(/_/g, " ").toUpperCase() + " CLOCK";
+  demoTitle =  appName.replace(/_/g, " ").toUpperCase() + " " + clock;
 }
 document.getElementById("demoTitle").innerHTML = demoTitle;
 
